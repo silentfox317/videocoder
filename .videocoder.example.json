@@ -1,0 +1,33 @@
+{
+  "$schema": "./opencode-schema.json",
+  "mcpServers": {
+    "mcp-video": {
+      "command": "npx",
+      "args": ["@kyanite/mcp-video"],
+      "type": "stdio"
+    }
+  },
+  "providers": {
+    "openai-compatible": {
+      "model": "mistral-large-latest",
+      "baseUrl": "http://localhost:5000/v1",
+      "apiKey": "your-api-key",
+      "models": [
+        { "id": "mistral-large-latest", "name": "Mistral Large" },
+        { "id": "mistral-medium-latest", "name": "Mistral Medium" },
+        { "id": "gpt-4o", "name": "GPT-4o" },
+        { "id": "claude-opus-4", "name": "Claude Opus 4" }
+      ]
+    }
+  },
+  "agents": {
+    "coder": {
+      "model": "mistral-large-latest",
+      "maxTokens": 8192
+    }
+  },
+  "shell": { "enabled": true },
+  "lsp": {},
+  "tui": { "theme": "catppuccin-mocha" },
+  "autoCompact": true
+}

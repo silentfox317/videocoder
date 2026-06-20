@@ -1,0 +1,4 @@
+videocoder
+.videocoder.json
+*.local.*
+.DS_Store
